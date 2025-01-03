@@ -20,10 +20,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 @keyframes scrollText {
-  from { transform: translateX(0%); }
-  to { transform: translateX(-50%); }
+  from { 
+    transform: translateX(100%); 
+  }
+  to { 
+    transform: translateX(-100%);
+  }
 }
 
 .animate-scrollText {
-  animation: scrollText 20s linear infinite;
+  display: inline-block; /* Make sure the text is inline */
+  white-space: nowrap; /* Prevent text from wrapping */
+  animation: scrollText 60s linear infinite;
 }
